@@ -1,0 +1,77 @@
+﻿<ion-view view-title="New Teame" hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" alt="logo">
+            </div>
+            <div class="row">
+                
+            </div>
+            <div class="teamNameDivEdit">
+                <div class="editTeamName">
+                    <h3 class="teamNameEdit">ԱՆՈՒՆ</h3>
+                    <input ng-model="team.name" name="nameTeame" class="form-control teamNameInputEdit" placeholder="name">
+                </div>
+                <img src="images/new/groupIconNew.png" alt="grup icon" class="grupIconNew" />
+            </div>
+            <div class="scrolDiv">
+                <div class="scrolDiv2">
+                    <ion-scroll zooming="false" direction="y" class="scrolSize">
+                
+                            <div class="row" ng-repeat="player in team.members">
+                                <!--<img ng-src="{{player.imgURI}}" ng-show="imgURI !== undefined"  class="img-responsive" alt="Cinque Terre" width="60" height="20">-->
+                                <img ng-src="{{player.pic}}" ng-click="takePicture(player)" class="img-responsive playerImg" id="playerImg" alt="Cinque Terre" width="50" height="50">
+                                <img ng-src="images/new/imageFrame.png" ng-click="takePicture(player)" class="img-responsive playerImgMask" alt="">
+                                <div class="playerNameDivEdit">
+                                    <input type="text" placeholder="name" class="form-control playerNameEdit" ng-model="player.name" />
+                                </div>
+                                
+                                <a ng-click="delete($index)" class="editDeletePlayer" ng-show="deletePlayer"></a>
+                                <a ng-click="fbConect($index)" class="editfbPlayer" ng-show="fbShow"></a>
+                            </div>
+                    </ion-scroll>
+                </div>
+            ]</div>
+            
+            <br />
+            <div class="row">
+                <a class="editPageImg newPlayer" ng-click="newPlayer()"></a>
+                <a class="editPageImg updatePlayer" ng-click="update(countPlayer, namePlayer)"></a>
+            </div>
+            <div class="row back" id="back">
+                <a class="backButtton" ng-click="back()"></a>
+            </div>
+        </div>
+        <div class="bg" ng-show="chooseSource">
+            <div class="popupFoto">
+                <div class="popupFotoDiv">
+                    <a ng-click="popupPhoto(1)" class="cameraButton vcenter"></a>
+                    <a ng-click="popupPhoto(0)" class="galleryButton vcenter"></a>
+                </div>
+            </div>
+            <a id="closebutton" class="closeButton" ng-click="closePopup()"></a>
+        </div>
+        <div class="bgFb" ng-show="fbConectShow">
+
+            <div class="friendConect">
+                <ul class="vcenter">
+                    <li class="active vcenter divNewfbButton"><a href="#" data-toggle="tab" class="playing" ng-click="popupfb(0)"></a></li>
+                    <li class="vcenter divNewfbButton"><a href="#" data-toggle="tab" ng-click="popupfb(1)" class="allFriends"></a></li>
+                </ul>
+                <!--<button ng-click="popupfb(0)">In Game</button>
+            <button ng-click="popupfb(1)">All</button>-->
+            </div>
+            <ion-scroll zooming="false" direction="y" class="editScrol">
+                <div class="allFriendfb" ng-repeat="friend in friends" ng-show="allFriend">
+                    <img ng-src="{{friend.pic}}" class="img-responsive imgTest" id="playerImg" alt="Cinque Terre" width="50" height="50">
+                    <img ng-src="images/new/imageFrame.png" class="img-responsive playerImgMaskTest" alt="">
+                    <div class="divNameFb">
+                        <p ng-model="friend.name" class="fbFreandsName">{{friend.name}}</p>
+                        <a ng-click="fbAddFriend($index)" class="addFbFrends"></a>
+                    </div>
+                </div>
+            </ion-scroll>
+            <a id="closeFbbutton" class="closeButtonNew" ng-click="closeFbPopup()"></a>
+        </div>
+    </ion-content>
+</ion-view>

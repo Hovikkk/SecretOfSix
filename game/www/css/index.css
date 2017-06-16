@@ -1,0 +1,2374 @@
+﻿@font-face {
+    font-family: ArTarumianHelveticaBold; /* Имя шрифта */
+    src: url(../fonts/ArTarumianHelveticaBold.ttf); /* Путь к файлу со шрифтом */
+}
+body {
+    background-size: 100% !important;
+    position:absolute;
+    z-index:1;
+}
+
+.vcenter {
+    margin:0 auto;
+}
+.divNewfbButton{
+    width: 48vw;
+}
+.logo{
+    width:100%;
+    height: 26vw;
+    margin-bottom: 10vw;
+    position:relative;
+    z-index:3;
+}
+
+.scrolRules{
+    width:100%;
+    height:62vh;
+    overflow: auto;
+}
+.scrolPlayer{
+    width:100%;
+    height:39vh;
+    overflow: auto;
+    display: block;
+}
+.scrolPreparingGame{
+    width:88vw;
+    height:32vh;
+    overflow: auto;
+    display: block;
+}
+.scrolDescription{
+    width:100%;
+    height:14vh;
+    overflow: auto;
+}
+::-webkit-scrollbar{
+    width:12px;
+}
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #777;
+    background-color: #aaa;
+}
+::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #777;
+}
+::-webkit-scrollbar-track{
+    border-width:0;
+}
+::-webkit-scrollbar-track:hover{
+    border-left: solid 1px #aaa;
+    background-color: #eee;
+}
+.soundH4{
+    margin-top: 0vw;
+    
+}
+.soundcheckbox {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.timer {
+    display:inline;
+}
+.selectedTr{
+    background: url(../images/play/groupActiv.png) !important;
+    background-size: 100% 100% !important;
+}
+
+.selectedTr td{
+    color:#d9d994;
+}
+.playTeameCount{
+    float:right;
+    margin-right: 6vw;
+}
+.tdPlayTeameNameCount{
+    width: 87vw;
+    display: table-cell;
+}
+.teamNameDivPlay{
+    float: left;
+    width: 62vw;
+    margin-left: 7vw;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.bgFb{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(15,15,15,0.5);
+}
+.friendConect {
+    width: 83%;
+    height: 81vw;
+    margin: 50vw auto;
+    background: url('../images/new/fb/bg.png');
+    background-size: 100% 100%;
+    border-radius: 9px;
+}
+.friendConect ul{
+    padding-top: 9vw;
+}
+.scrollFb{
+    width: 74vw;
+    height: 53vw;
+    position: absolute;
+    top: 74vw;
+    left: 13vw;
+}
+.imgTest{
+    position: absolute;
+    border-radius: 50px;
+    height: 12vw;
+    width: 12vw;
+    margin-left: 7vw;
+    display: block;
+    float: left;
+}
+.playerImgMaskTest{
+    position: absolute;
+    left: 0;
+    margin-left: 7vw;
+    height: 12vw;
+    display: block;
+    float: left;
+}
+.fbFreandsName{
+    margin-top: 2vw;
+    float: left;
+    width: 30vw;
+    /*text-overflow: ellipsis;*/ /* Добавляем многоточие */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+}
+.addFbFrends {
+    background-image: url('../images/new/fb/fr_button.png');
+    background-size: 100% 100%;
+    height: 10vw;
+    width: 10vw;
+    margin-top: -3.5vw;
+    float: right;
+    display: block;
+}
+.fbNameFriend{
+    color: #fff;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+}
+.allFriends {
+    background: url('../images/new/fb/bolorButton.png');
+    background-size: 100% 100%;
+    width: 21vw;
+    height: 13vw;
+    display: table-cell;
+    float: right;
+}
+.playing {
+    background: url('../images/new/fb/xaxacoxButton.png');
+    background-size: 100% 100%;
+    width: 21vw;
+    height: 13vw;
+    float:left;
+    display: flex;
+}
+.divNameFb{
+    display: block;
+    position: absolute;
+    margin-left: 24vw;
+    margin-top: 5vw;
+    width:45vw;
+}
+#closeFbbutton{
+    position: absolute;
+    z-index: 1;
+    top: 192px;
+    right: 40px;
+    width: 28px;
+    height: 28px;
+}
+
+
+.allFriendfb{
+    margin: 0.5vw auto;
+    display: list-item;
+    height: 13vw;
+}
+.bg {
+    position: fixed;
+    top: 0px;
+    /*left: -12px;*/
+    height: 100vh;
+    width: 100vw;
+    background: rgba(15,15,15,0.5);
+}
+#bg_home {
+    top: -9px;
+}
+.bg button {
+    height: 38px;
+    width: 100px;
+    margin: 45px 23px;
+}
+#closebutton{
+    position: absolute;
+    z-index: 1;
+    top: 56vw;
+    right: 11vw;
+    width: 8vw;
+    height: 8vw;
+}
+.closeButton {
+    background: url('../images/new/fotoPopup/xButton.png');
+    background-size: 100% 100%;
+}
+#closebuttonNew{
+    position: absolute;
+    z-index: 1;
+    top: 54vw;
+    right: 12vw;
+    width: 8vw;
+    height: 8vw;
+}
+.closeButtonNew {
+    background: url('../images/new/fotoPopup/xButton.png');
+    background-size: 100% 100%;
+}
+/*.bg div {
+    width: 83%;
+    height: 131px;
+    margin: 194px auto;
+    background: #ffffff;
+    border-radius: 9px;
+}*/
+.divBlock {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/BG_game.png');
+    background-size: 100% 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 6;
+}
+.loadingSpiner {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #fff;*/
+    /*background-image: url('../images/bgLoading.png');*/
+    background-image: url('../images/gameBgLoadin.png');
+    background-size: 100% 100%;
+    vertical-align: middle;
+    display: table-cell;
+    position: absolute;
+    z-index: 1000000000000;
+    top: 0;
+}
+.loadingSpiner ion-spinner svg{
+    margin: 50vw;
+}
+
+.logoLoad {
+    width: 160px;
+    height: 70px;
+    position: absolute;
+    top: 10vh;
+    left: 30vw;
+}
+
+timer {
+    text-shadow: 1px 1px 2px black, 0 0 1em blue;
+    color:#fff0a5;
+    font-size: 5vw;
+    font-weight: 900;
+    position: absolute;
+    right: 14.9vw;
+    top: 32.3vw;
+    z-index: 5;
+    width: 9vw;
+    text-align: center;
+}
+.owerNumeric{
+    padding-left: 0;
+    margin: 7vw 0;
+    text-align: center;
+    list-style: none;
+    margin-top: 1.5vw;
+}
+.owerNumeric .hide_numirical {
+    display: none;
+    width: 11vw;
+    max-width: 11vw;
+    height: 11vw;
+    font-size: 5vw;
+    padding-top: 2vw;
+}
+.owerNumeric .active_numerical {
+    
+    background: url(../images/new/ramka.png);
+    background-size: 100% 100%;
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+}
+.owerNumeric .next_numerical {
+    position:absolute;
+    display: block;
+    background: url(../images/new/ramkaNextPrv.png);
+    background-size: 100% 100%;
+    margin-top: 0.8vw;
+    width: 5.5vw;
+    height: 5.5vw;
+    font-size: 2.5vw;
+    margin-left: 2.8vw;
+    vertical-align: middle;
+    line-height: 2vw;
+}
+.owerNumeric .prv_numerical {
+    position:absolute;
+    vertical-align: middle;
+    display: block;
+    background: url(../images/new/ramkaNextPrv.png);
+    background-size: 100% 100%;
+    margin-top: -6vw;
+    width: 5.5vw;
+    height: 5.5vw;
+    font-size: 2.5vw;
+    line-height: 2vw;
+    margin-left: 2.8vw;
+    
+}
+.back{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+#back {
+    width: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 10vw;
+}
+.backRules{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+#backRules {
+    width: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 4vw;
+}
+.backTop{
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+#backTop {
+    width: 10vw;
+    margin-left: 10vw;
+    margin-bottom: 4vw;
+}
+.prepScrolText{
+    font-size:4vw;
+}
+#container{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.homePageImg {
+    width: 65%;
+    height: 11vh;
+    margin-left: 17.5vw;
+    margin-top: 3vh;
+}
+.imgActive {
+    
+}
+.exitButton {
+    background:url(../images/homeButton/buttonExit.png);
+    background-size: 100% 100%;
+}
+.exitButton:active  {
+    background:url(../images/homeButton/active/buttonExitActive.png);
+    background-size: 100% 100%;
+}
+.fbConect {
+    background:url(../images/homeButton/fbConect.png);
+    background-size: 100% 100%;
+}
+.fbConect:active {
+    background:url(../images/homeButton/active/fbConectActive.png);
+    background-size: 100% 100%;
+}
+.fbLogoutButton {
+    background:url(../images/homeButton/fbLogoutButton.png);
+    background-size: 100% 100%;
+}
+.fbLogoutButton:active {
+    background:url(../images/homeButton/active/fbLogoutActive.png);
+    background-size: 100% 100%;
+}
+.fbDisabledButton {
+    background:url(../images/homeButton/fbDisabledButton.png);
+    background-size: 100% 100%;
+}
+.settingsButton {
+    background:url(../images/homeButton/settingsButton.png);
+    background-size: 100% 100%;
+}
+.settingsButton:active {
+    background:url(../images/homeButton/active/settingsButtonActive.png);
+    background-size: 100% 100%;
+}
+.rulesButton {
+    background:url(../images/homeButton/rulesButton.png);
+    background-size: 100% 100%;
+}
+.rulesButton:active {
+    background:url(../images/homeButton/active/rulesButtonActive.png);
+    background-size: 100% 100%;
+}
+.buttonPlay {
+    background:url(../images/homeButton/buttonPlay.png);
+    background-size: 100% 100%;
+}
+.buttonPlay:active {
+    background:url(../images/homeButton/active/buttonPlayActive.png);
+    background-size: 100% 100%;
+}
+.grupIcon{
+    width: 35.559vw;
+    height: 35.559vw;
+    margin-top: 13vw;
+}
+.newButton{
+    background:url(../images/play/playButton/stexcelButton.png);
+    background-size: 100% 100%;
+    width: 46vw;
+    height: 16vw;
+    margin-left: 26vw;
+}
+.newButton:active{
+    background:url(../images/play/playButton/active/stexcelActiv.png);
+    background-size: 100% 100%;
+    width: 46vw;
+    height: 16vw;
+    margin-left: 26vw;
+}
+.playH2{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    width:100vw;
+    margin-top: 10vw;
+}
+.rulesDiv{
+    width: 95vw;
+    display: block;
+}
+.rulesDiv p{
+    color:#fff;
+    font-size: 4vw;
+}
+.rulesScrol{
+    width: 96vw;
+    height: 117vw;
+    /* margin: 0 auto; */
+    text-align: left;
+    margin-left: 2vw;
+}
+.ulRules{
+    display: block;
+    list-style-type: circle;
+    
+}
+.ulRules li{
+    list-style-type: circle;
+}
+.ulRulesTitle{
+    font-size: 5.5vw;
+    color: #61c3ff;
+}
+.ulRulesTitle a{
+    color: #389ab9
+}
+.ulRulesText{
+    color:#fff;
+    font-size:4vw
+}
+.rulesScrolDiv{
+    width:100vw
+}
+#titleRulesGame{
+    font-size:4.5vw;
+    color: #f7f798;
+}
+.spanDotGame{
+    background: #f7f798;
+    width: 5vw;
+    height: 5vw;
+    display: inline-block;
+    border-radius: 100vw;
+}
+.spanDotRules{
+    background: #f0a637;
+    width: 5vw;
+    height: 5vw;
+    display: inline-block;
+    border-radius: 100vw;
+}
+.spanDotSetting{
+    background: #b9e59b;
+    width: 5vw;
+    height: 5vw;
+    display: inline-block;
+    border-radius: 100vw;
+}
+.spanDotSign{
+    background: #389ab9;
+    width: 5vw;
+    height: 5vw;
+    display: inline-block;
+    border-radius: 100vw;
+}
+.spanDotExit{
+    background: #f37951;
+    width: 5vw;
+    height: 5vw;
+    display: inline-block;
+    border-radius: 100vw;
+}
+#titleRulesRul{
+    font-size:4.5vw;
+    color: #f0a637;
+}
+#titleRulesSetting{
+    font-size:4.5vw;
+    color: #b9e59b;
+}
+#titleRulesSign{
+    font-size:4.5vw;
+    color: #389ab9;
+}
+#titleRulesExit{
+    font-size:4.5vw;
+    color: #f37951;
+}
+.bg2{
+    position:absolute;
+    z-index:2;
+    float:left;
+    width:100%;
+    height:100%
+}
+.scrolDiv{
+    width: 100vw;
+    height: 69vw;
+    background: url(../images/bg2.png);
+    background-size: 100% 100%;
+}
+.scrolDiv2{
+    width:100vw;
+    height: 68vw;
+    padding-top: 1.7vw;
+}
+.scrolSize{
+    width:100vw;
+    height: 66.5vw;
+    
+}
+.teamNameDiv{
+    background: url(../images/new/groupName.png);
+    width: 54vw;
+    height: 12vw;
+    margin-left: 5vw;
+    margin-right: 3vw;
+}
+.teamName{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    margin-left: 20vw;
+}
+.teamCount{
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    color: #fff;
+    font-size: 4vw;
+    margin: 10vw 0vw 0vw 24.5vw;
+}
+.teamNameEdit{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+   /* margin-left: 20vw;*/
+    margin-top: -7vw;
+}
+.teamNameInputEdit{
+    background:none;
+    border: 0px;
+    width: 51vw;
+    
+    display: block;
+    margin-top: 3.1vw;
+    max-height: 10vw;
+    height: 10vw;
+    margin-left: 3vw;
+    font-size: 4vw;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+}
+.teamNameInput{
+    background:none;
+    border: 0px;
+    width: 51vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    font-size: 4vw;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+}
+.playerImg{
+    border-radius:60px;
+    background-size: 100% 100%;
+    width: 20vw;
+    height: 20vw;
+    margin-left: 5vw;
+    margin-top: 7vw;
+    clip-path: circle(32px at center);
+    -webkit-clip-path: circle(32px at center);
+}
+.playerImgMask {
+    position: absolute;
+    left: 0;
+    margin-left: 5vw;
+    margin-top: 7vw;
+    height: 20vw;
+}
+.playerNameDiv{
+    background: url(../images/new/nameFrame.png);
+    width: 53vw;
+    height: 12vw;
+    margin-top: 10vw;
+}
+.playerNameDivEdit{
+    background: url(../images/new/nameFrame.png);
+    width: 53vw;
+    height: 12vw;
+    margin-top: 10vw;
+}
+.playerNameDivEdit input{
+    width: 41vw;
+}
+.playerNameDiv input{
+    width: 46vw;
+}
+.playerName{
+    background:none;
+    border: 0px;
+    width:61vw;
+    margin: 4vw 0 0 7vw;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+}
+.playerNameEdit{
+    background:none;
+    border: 0px;
+    width: 61vw;
+    margin: 4vw 0 0 7vw;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    
+}
+.popupFoto {
+    background: url('../images/new/fotoPopup/bg.png');
+    background-size: 100% 100%;
+    width: 83%;
+    height: 35vw;
+    margin: 54vw auto;
+}
+.popupFotoDiv{
+    margin: 0 auto;
+    width: 42vw;
+    height: 25vw;
+    padding-top: 13vw;
+}
+.cameraButton {
+    background: url('../images/new/fotoPopup/camera.png');
+    background-size: 100% 100%;
+    width: 11vw;
+    height: 11vw;
+    display: inline-block;
+    margin-right: 18vw;
+    vertical-align: middle;
+}
+.galleryButton {
+    background: url('../images/new/fotoPopup/gallery.png');
+    background-size: 100% 100%;
+    width: 11vw;
+    height: 11vw;
+    display: inline-block;
+    vertical-align: middle;
+}
+#logoNew{
+    margin-bottom: 0vw;
+    z-index: 8;
+}
+.saveNewButton{
+    background:url(../images/new/sharunakButton.png);
+    background-size: 100% 100%;
+    width: 52vw;
+    margin-left: 23vw;
+}
+.saveNewButton:active {
+    background:url(../images/new/active/sharunakActiv.png);
+    background-size: 100% 100%;
+    width: 52vw;
+    margin-left: 23vw;
+}
+.grupIconNew{
+    width: 14vw;
+    height: 14vw;
+    margin-left: 3vw;
+}
+.circle{
+    width: 1.8vw;
+    height: 1.8vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    border-radius: 38vw;
+    background:#fff
+}
+.arrowIcon{
+    width: 3vw;
+    height: 2vw;
+}
+.arrow{
+    margin-left:10vw;
+    /*margin-top: 2vw;*/
+    vertical-align: middle;
+    line-height: 5vw;
+    display: table-cell;
+}
+.newGroupIcon {
+    width: 20vw;
+    height: 17vw;
+    margin-top: -4vw;
+}
+.playH3 {
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    width: 62vw;
+    font-size: 6vw;
+}
+.newGroupText {
+    
+    display: inherit;
+}
+.editButton {
+    background:url(../images/play/playButton/poxelButton.png);
+    background-size: 100% 100%;
+}
+.editButton:active {
+    background:url(../images/play/playButton/active/poxelActiv.png);
+    background-size: 100% 100%;
+}
+.deleteButton {
+    background:url(../images/play/playButton/jnjelButton.png);
+    background-size: 100% 100%;
+}
+.deleteButton:active {
+    background:url(../images/play/playButton/active/jnjelActiv.png);
+    background-size: 100% 100%;
+}
+.nextButton{
+    background:url(../images/play/playButton/arajButton.png);
+    background-size: 100% 100%;
+}
+.nextButton:active {
+    background:url(../images/play/playButton/active/arajActiv.png);
+    background-size: 100% 100%;
+}
+.playPageImg{
+    width: 26%;
+    height: 16vw;
+    margin-top: 8.5vw;
+    margin-left: 9vw;
+}
+
+.tablePlay{
+    width: 89vw;
+    max-width: 89vw;
+}
+.tablePlay tr {
+    background:url(../images/play/groupButtton.png);
+    background-size: 100% 100%;
+    height: 23vw;
+    max-height: 23vw;
+}
+.tablePlay tr td{
+    border-top:0px !important;
+    font-size: 7vw;
+    vertical-align: middle !important;
+}
+.playPageImgNew{
+    margin-bottom: 5vw;
+}
+.teamNameDivEdit{
+    width: 80vw;
+    margin: 8vw auto;
+    display: flex;
+}
+.teamNameDivEdit teamNameInput {
+    background:none;
+    border: 0px;
+    width: 51vw;
+    margin-top:1.5vh;
+    margin-left: 3vw;
+}
+.buttonPlayknopki{
+    width: 100vw;
+    height: 9vh;
+}
+.buttonPlayknopki a {
+    display:inline-table;
+}
+
+.editDeletePlayer{
+    background: url(../images/edit/delButton.png);
+    background-size: 100% 100%;
+    height: 13vw;
+    width: 13vw;
+    margin-top: 10vw;
+}
+.editDeletePlayer:active{
+    background: url(../images/edit/active/delActiv.png);
+    background-size: 100% 100%;
+    height: 13vw;
+    width: 13vw;
+    margin-top: 10vw;
+}
+.editfbPlayer {
+    background: url('../images/edit/fbButton.png');
+    background-size: 100% 100%;
+    height: 14vw;
+    width: 14vw;
+    margin-top: 10vw;
+}
+    .editfbPlayer:active {
+        background: url('../images/edit/active/fbActiv.png');
+        background-size: 100% 100%;
+        height: 14vw;
+        width: 14vw;
+        margin-top: 10vw;
+    }
+.editPageImg{
+    width: 26%;
+    height: 16vw;
+    margin-top: 4vw;
+    margin-left: 9vw;
+}
+.newPlayer {
+    background: url('../images/edit/newPlayerButton.png');
+    background-size: 100% 100%;
+}
+.updatePlayer{
+    background: url('../images/edit/tarmButton.png');
+    background-size: 100% 100%;
+}
+.editTeamName{
+    background: url(../images/new/groupName.png);
+    width: 53vw;
+    height: 7vh;
+    margin-left: 5vw;
+    margin-right: 3vw;
+    display:block;
+}
+.checkboxButton input::before {
+    background: url('../images/next/o.png');
+    background-size: 100% 100%;
+    border: none;
+    width: 10vw;
+    height: 10vw;
+}
+.checkboxButton {
+    width: 76vw;
+    margin-bottom: 7vw;
+    height:13vw;
+}
+.checkboxButton h3 {
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 6vw;
+}
+.easyIcon { 
+    margin-top: -12vw;
+    float: right;
+}
+.normalIcon {
+    margin-top: -12vw;
+    float: right;
+}
+
+
+.hardIcon {
+    margin-top: -12vw;         
+    float: right;
+}
+@media screen and (min-width: 600px) {
+    .easyIcon{
+        margin-top: -4vw;
+    }
+    .normalIcon{
+        margin-top: -4vw;
+    }
+    .hardIcon{
+        margin-top: -4vw;
+    }
+}
+.checkboxButton label {
+    display: inline-flex;
+    width: 50vw;
+    float: left;
+}
+.checkboxButton input[type="checkbox"]{
+    
+}
+.checkboxButt{
+    width: 76vw;
+    height: 57vw;
+    margin-top: 4vw;
+}
+.nextLevelButton {
+    background: url('../images/next/xaxalButton.png');
+    background-size: 100% 100%;
+        height: 20vw;
+    width: 33vw;
+}
+#loopCount{
+   margin-top: 5vw;
+}
+#arrowDiv{
+    margin-top: 4vw;
+}
+#arrowDiv .circle{
+    width: 2vw;
+    height: 2vw;
+    margin-left: 0.5vw;
+}
+.loopCountGame{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    margin-top: 5vw;
+    margin-right: 4vw;
+    font-size: 5vw;
+}
+.divCount{
+    width: 100vw;
+    height: 13vh;
+    margin-top: 16vw;
+}
+.divLoop{
+    margin: 0 auto;
+    display: inline-flex;
+}
+.enhH3{
+    margin-top: 3vw;
+}
+.errorENH{
+    color:#fff;
+    font-weight: bold;
+    margin: 0vw auto 2vw;
+    font-family:ArTarumianHelveticaBold;
+        width: 100vw;
+    font-size: 4vw;
+}
+.teameNamePreparing {
+    background: url('../images/preparingGame/bg3.png');
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 2;
+}
+.teameNamePreparing th{
+    border-top: none !important;
+}
+
+.tableTeameName{
+    margin-top: -10px;
+    height: 10vh;
+    margin-bottom: 0px;
+}
+.teameSpan{
+    width: 46vw;
+    float: left;
+    text-align: center;
+    margin-top: 2vw;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    font-size: 7.5vw;
+}
+.teameSpanStepResult{
+    width: 40vw;
+    text-align: center;
+    margin-top: 2vw;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    font-size: 7.5vw;
+}
+.teameSpan1{
+    float:left;
+}
+.teameSpan2{
+    float: right;
+}
+#logoPreparing{
+    margin-bottom: 0vh;
+    
+}
+.scrolDivPre {
+    width: 100vw;
+    height: 69vw;
+    background-image: url('../images/preparingGame/bg.png');
+    background-size: 100% 100%;
+}
+.scrolPreparing{
+    width: 100vw;
+    height: 66.5vw;
+}
+.tableTeamePlayerPreparing tr td{
+    border-top:none !important;
+}
+.preparingText{
+    width: 85vw; 
+    height: 100px;
+    color: #fff;
+    font-size: 0.8em;
+    margin: 4vw auto;
+}
+.gotoButton {
+    background: url('../images/preparingGame/arajButton.png');
+    background-size: 100% 100%;
+    height: 17vw;
+    width: 25vw;
+}
+.gotoButton:active {
+    background-image: url('../images/preparingGame/active/arajActiv.png');
+    background-size: 100% 100%;
+    height: 17vw;
+}
+.readyToPlayPic{
+    border-radius: 95px;
+    position: absolute;
+}
+.gvToPlayPic{
+    border-radius: 95px;
+    position: absolute;
+    width: 16vw;
+    height: 16vw;
+}
+.delPlayerPic{
+    border-radius: 95px;
+    position: absolute;
+    height: 14vw;
+    width: 14vw;
+}
+.readyPlayerImgMask{
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+}
+.gvPlayerImgMask{
+    margin: 0 auto;
+    position: absolute;
+    z-index: 3;
+    width: 16vw;
+    display: inline-flex;
+}
+.delPlayerImgMask{
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    display: table-cell;
+}
+.readyGoToButton {
+    background: url('../images/readyToPlay/arajButton.png');
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 27vw;
+}
+.readyGoToButton:active {
+    background: url('../images/readyToPlay/active/arajActiv.png');
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 27vw;
+}
+.readyEndGameButton {
+    background-image: url('../images/readyToPlay/elqButton.png');
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 27vw;
+    float:right;
+}
+.readyEndGameButton:active {
+    background-image: url('../images/readyToPlay/active/elqActiv.png');
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 27vw;
+}
+#readyLogo{
+    margin-bottom: 21vw;
+}
+.teamPlayerText{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 7vw;
+}
+.teamPlayerText span{
+    width: 80%;
+   /* margin: 0 auto;*/
+    /*text-overflow: ellipsis;*/ /* Добавляем многоточие */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    
+}
+
+.readyToPlayPlayerName{
+    display:block;
+    margin:0 auto;
+    margin-top: 2vw;
+}
+.editScrol{
+    width: 80vw;
+    height: 186px;
+    position: absolute;
+    top: 268px;
+    left: 37px;
+}
+.teameNameIconDiv{
+    display: block;
+    width: 100vw;
+    height: 13vw;
+    text-align: center;
+}
+.divTeamNameReadToPlay{
+    height: 100%;
+    /*overflow: auto;*/
+    width: fit-content;
+    width: -webkit-fit-content;
+    text-align: center;
+    display: inline-flex;
+    width: 62vw;
+}
+.readyToPlayTeamName{
+    display: block;
+    float: left;
+   
+    text-align: right;
+}
+#readyToPlayTeamName{
+    width: fit-content;
+    width: -webkit-fit-content;
+    text-align: left;
+    display: inline-block;
+    max-width: 50vw;
+    margin-top: 5vw;
+}
+.teamIcon1 {
+    background-image: url('../images/readyToPlay/men_icong.png');
+    background-size: 100% 100%;
+    width: 11vw;
+    height: 14vw;
+    display: inline-block;
+    vertical-align: middle;
+    float:left;
+    padding-left: 9vw;
+}
+.teamIcon1 p{
+    font-size: 0.7em;
+    display: inline-flex;
+    margin-top: 5.5vw;
+    margin-left: -9vw;
+}
+.teamIcon2 {
+    background-image: url('../images/readyToPlay/men_icon.png');
+    background-size: 100% 100%;
+    width: 11vw;
+    height: 14vw;
+    display: inline-block;
+    vertical-align: middle;
+    float:left;
+    padding-left: 9vw;
+}
+.teamIcon2 p{
+    font-size: 0.7em;
+    display: inline-flex;
+    margin-top: 5.5vw;
+    margin-left: -9vw;
+}
+.easy input:after {
+    background: url('../images/next/EllipseGreen.png');
+    background-size: 100% 100%;
+    height: 11vw;
+    width: 11vw;
+}
+.normal input:after {
+    background: url('../images/next/EllipseYelov.png');
+    background-size: 100% 100%;
+    height: 11vw;
+    width: 11vw;
+}
+.hard input:after {
+    background: url('../images/next/EllipseRed.png');
+    background-size: 100% 100%;
+    height: 11vw;
+    width: 11vw;
+}
+.bgExit {
+    position: fixed;
+    top: 0px;
+    /*left: -12px;*/
+    height: 100vh;
+    width: 100vw;
+    background: rgba(15,15,15,0.5);
+}
+#bg_home {
+    top: -9px;
+}
+.bgExit button {
+    height: 38px;
+    width: 100px;
+    margin: 45px 23px;
+}
+.bgExitDiv {
+    margin: 70vw auto;
+    background: url('../images/exit/bgss.png');
+    background-size: 100% 100%;
+    width: 83vw;
+    height: 43vw;
+}
+.yesButton {
+    background: url('../images/exit/x.png');
+    background-size: 100% 100%;
+    width: 21vw;
+    height: 12vw;
+    position: absolute;
+}
+.yesButton:active {
+    background-image: url('../images/exit/active/activ1.png');
+    background-size: 100% 100%;
+    width: 21vw;
+    height: 12vw;
+    position: absolute;
+}
+.noButton {
+    background: url('../images/exit/NO.png');
+    background-size: 100% 100%;
+    width: 21vw;
+    height: 12vw;
+    position: relative;
+    float:right
+}
+.noButton:active {
+    background-image: url('../images/exit/active/activ2.png');
+    background-size: 100% 100%;
+    width: 21vw;
+    height: 12vw;
+    position: relative;
+    float: right;
+}
+.centerDiv{
+        width: 51vw;
+    height: 15vw;
+    padding-top: 20vw;
+}
+.teameNameTh{
+    font-size:2em;
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+}
+.imgPlayerPreparing{
+    position: absolute;
+    border-radius: 27px;
+    height: 50px;
+}
+.preparingFrame{
+    position: relative;
+}
+.teamDiv1{
+    margin:0 auto;
+    width: 32vw;
+}
+.teamDiv1 span{
+    color:#fff;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    /*text-overflow: ellipsis;*/ /* Добавляем многоточие */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    font-size: 4vw;
+
+}
+.divPreparing{
+    margin: 0 auto;
+    width: 15vw;
+}
+@media screen and (min-width: 600px) {
+    .divPreparing{
+        width: 8.5vw;
+    }
+}
+
+#tableTrStyleGV {
+    background-image: url('../images/gameView/buttonNorm.png');
+    background-size: 100% 100%;
+}
+#tableTrStyleGV th{
+    border-top: none !important;
+    text-align: center;
+    line-height: 1.7;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 4.5vw;
+}
+
+.easyModeGV {
+    background: url('../images/gameView/active/easyActiv.png') !important;
+    background-size: 100% 100% !important;
+}
+.normalModeGV {
+    background: url('../images/gameView/active/normalActiv.png') !important;
+    background-size: 100% 100% !important;
+}
+.hardModeGV {
+    background: url('../images/gameView/active/hardActiv.png')!important;
+    background-size: 100% 100% !important;
+}
+.tableWidth {
+    width: 91vw;
+    margin: 0 auto;
+    border-spacing: 18px;
+    border-collapse: separate;
+}
+.tableDiv{
+    width: 100vw;
+}
+.teamPlayerTextGameView{
+    width: 100vw;
+    height: 16vw;
+    font-size: 7.5vw;
+}
+.teameIcon{
+    width: 15vw;
+    float: left;
+    margin-left: 13vw;
+}
+.resetGV {
+    background-size: 100% 100%;
+    height: 11vw;
+    width: 25vw;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+    display: inline-block;
+    
+}
+.resetButtonGV{
+    width: 80vw;
+    
+    margin: 0 auto;
+}
+.resetText{
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 2vw;
+    font-size: 4vw;
+}
+.continueGV {
+    background-image: url('../images/gameView/continue.png');
+    background-size: 100% 100%;
+    height: 15vw;
+    width: 33vw;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+    display: inline-block;
+}
+.continueText{
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 2vw;
+    font-size: 3.5vw;
+}
+.closeGV {
+    background-image: url('../images/readyToPlay/elqButton.png');
+    background-size: 100% 100%;
+    height: 13vw;
+    width: 21vw;
+    display: inline-block;
+}
+.resetDiv {
+    background-image: url('../images/new/fb/bg.png');
+    background-size: 100% 100%;
+    width: 83vw;
+    height: 45vw;
+    margin: 61vw auto;
+}
+.nameDivText{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 1.4em;
+    float:left;
+    width: 43vw;
+}
+.nameDivText span{
+    display:block;
+    width: 41vw;
+    /*text-overflow: ellipsis;*/ /* Добавляем многоточие */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+}
+.prepartingGameTd{
+    width: 50%;
+    display: inline-block;
+}
+.tdStepResult{
+    padding: 8px 0px;
+    
+    width: 50%;
+        padding: 0px;
+    /* margin-left: 4vw; */
+    display: inline-block;
+}
+.imgPlayerGV{
+    width: 61vw;
+    height: 17vw;
+}
+.goToGVButton {
+    background: url('../images/gameView/arajButton.png');
+    background-size: 100% 100%;
+    height: 15vw;
+        width: 23vw;
+}
+.goToGVButton:active {
+    background-image: url('../images/gameView/active/arajActiv.png');
+    background-size: 100% 100%;
+    height: 15vw;
+        width: 23vw;
+}
+.timerDiv{
+    width: 56vw;
+    margin: 0 auto;
+    font-family: ArTarumianHelveticaBold;
+    font-weight: bold;
+}
+.timerDiv h3{
+    float:left
+}
+.timerDiv timer{
+    float:left;
+}
+
+.readyTeame2 {
+    background: url('../images/gameView/arajButton.png');
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 29vw;
+    margin-top: 50vw;
+}
+.testTeame2{
+    background: url('../images/gameView/arajButton.png');
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 29vw;
+}
+.hcenter{
+    width:39vw;
+}
+.testCenter{
+    width:29vw;
+    margin-top: 7vw;
+}
+
+#tableTrStyleCheckGV {
+    background-image: url('../images/gameView/buttonNorm.png');
+    background-size: 100% 100%;
+}
+#tableTrStyleCheckGV th{
+    border-top: none !important;
+    text-align: center;
+    line-height: 1.7;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 4.5vw;
+}
+.confirmButton {
+    background: url('../images/gameView/hastatelButton.png');
+    background-size: 100% 100%;
+    height: 15vw;
+    width: 26vw;
+}
+.confirmButton:active {
+    background-image: url('../images/gameView/active/hastatelActiv.png');
+    background-size: 100% 100%;
+    height: 15vw;
+    width: 26vw;
+}
+.readyToPlayButton{
+    width: 66vw;
+    margin-top: 7vw;
+}
+.chechIcon{
+    width: 15vw;
+    height: 15vw;
+    display: inline;
+}
+.chechText{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    display: inline-block;
+}
+.chechIconHeader {
+    width:40vw;
+    display:block;
+    margin-top: 2vw;
+}
+.tableStepResult{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.tableStepResult {
+    background: url('../images/stepResult/sdd.png');
+    background-size: 100% 100%;
+}
+.tableStepResultTd{
+    width:50%;
+}
+.tableStepResultTd span{
+    font-size: 6vw;
+}
+.scrolDivStep {
+    background-image: url('../images/stepResult/bgbg.png');
+    width: 100vw;
+    height: 41vh;
+    background-size: 100% 100%;
+}
+.tableTeameHeader{
+    margin-top: -2.8vw;
+    height: 10vh;
+    margin-bottom: 0px;
+}
+#stepPlayerResult tr td{
+    border-top:none;
+}
+#stepResultTd{
+    margin-left: 3vw;
+    width: 46%;
+    padding: 8px 0px;
+}
+#tableStepResult tr td{
+    border-top:none;
+}
+.imgPlaer1{
+    position: absolute;
+    border-radius: 60px;
+    height: 15vw;
+    width: 15vw;
+}
+.imgPlaer2{
+    position: absolute;
+    border-radius: 60px;
+    height: 15vw;
+    width: 15vw;
+}
+.totalXp{
+    color:red;
+    width: 7vw;
+    font-size: 4vw;
+}
+.totalXpDiv {
+    width: 7vw;
+    height: 7vw;
+    line-height: 7vw;
+    border-radius: 27px;
+    background:#e4d794;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    vertical-align: middle;
+    display: flex;
+    position: relative;
+    left: -15px;
+}
+.stepResultFrame{
+    position: relative;
+    float:left;
+    width: 15vw;
+    height: 15vw;
+}
+.xpTeamStepResult{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 7.8vw;
+    float: right;
+    
+}
+#xpTeamStepResult{
+    margin-right: 1.5vw;
+}
+#xpTeamStepResult1{
+    margin-right: 1.8vw;
+}
+.goToStepResult {
+    background: url('../images/stepResult/arajButton.png');
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 25vw;
+}
+.tamePlayerStepRes{
+    float:left;
+    color:#fff;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    margin: 5vw 0vw 0vw 2vw;
+    /*text-overflow: ellipsis;*/ /* Добавляем многоточие */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    width: 12vw;
+    text-align: left;
+    font-size: 3vw;
+}
+.tamePlayerStepRes2{
+    width: 12vw !important;
+}
+.scrolDivResult {
+    background-image: url('../images/gameResult/bgResult.png');
+    width: 100vw;
+    height: 78vw;
+    background-size: 100% 100%;
+}
+#resultGameTable tr td{
+    border-top:none;
+    padding: 0;
+}
+#resultGameTable{
+    margin-top: 2vw;
+}
+.resultHeaderText{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    font-size: 7.5vw;
+    margin-bottom: 0px;
+}
+.resultBottomDiv {
+    background-image: url('../images/gameResult/buttomResult.png');
+    background-size: 100% 100%;
+    height: 22vw;
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    padding-top: 1vw;
+    font-size:1.5em;
+}
+.teameDiv{
+    width:50vw;
+    float:left;
+}
+.teameDivScore{
+    margin-top: -2vw;
+}
+.teameName1{
+    width: 31vw;
+    display: inline-block;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    font-size: 6vw;
+}
+.teameName2{
+    width: 31vw;
+    display: inline-block;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    font-size: 6vw;
+}
+.resultBottom{
+    display: table;
+    width: 100vw;
+    /*padding-top: 1vw;*/
+}
+#resultBottom{
+    margin-top: 2.5vw;
+}
+.teameResult1{
+    font-size: 6vw;
+}
+.teameResult2{
+    font-size: 6vw;
+}
+.ratingPlayerName{
+    font-family:ArTarumianHelveticaBold;
+    font-size: 6vw;
+    color:#fff;
+    float:left;
+    margin-left: 6vw;
+    width: 41vw;
+    text-align: left;
+    /*text-overflow: ellipsis;*/ /* Добавляем многоточие */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+}
+.imgRatingPlayer{
+    position: absolute;
+    border-radius: 60px;
+    width: 15vw;
+    height: 15vw;
+}
+.ratingPlayerTotalXp{
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 6vw;
+    color:#fff0a5;
+    float:right;
+}
+.scrolResult{
+    width: 100vw;
+    height: 75.2vw;
+}
+.scrolDiv3{
+    width: 100vw;
+    height: 43.5vh;
+    padding-top: 1vh;
+}
+.imgTestDiv{
+    margin-top: 50vw;
+}
+.easySettings {
+    background-image: url('../images/settings/buttonEasy.png');
+    background-size: 100% 100%;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    width: 22vw;
+    height: 9vw;
+
+}
+.easySettings:active {
+    background-image: url('../images/settings/active/buttonEasyActiv.png');
+    background-size: 100% 100%;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+     box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+     width: 22vw;
+    height: 9vw;
+}
+.normalSettings {
+    background-image: url('../images/settings/buttonNorm.png');
+    background-size: 100% 100%;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    width: 22vw;
+
+}
+.normalSettings:active {
+    background-image: url('../images/settings/active/buttonNormActiv.png');
+    background-size: 100% 100%;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    width: 22vw;
+}
+.hardSettings {
+    background-image: url('../images/settings/buttonHard.png');
+    background-size: 100% 100%;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    width: 22vw;
+}
+.hardSettings:active {
+    background-image: url('../images/settings/active/ButtonHardActiv.png');
+    background-size: 100% 100%;
+    -webkit-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 61px 1px rgba(0,0,0,0.75);
+    width: 22vw;
+}
+.resetSettings{
+    margin-top: 4vw;
+}
+.newGameResult {
+    background-image: url('../images/gameResult/newGame.png');
+    background-size: 100% 100%;
+    height: 18vw;
+    margin-top: 7vw;
+}
+#newGameResult{
+    height: 17vw;
+    width: 24vw;
+    margin-top:0vw;
+}
+.newGameResult:active {
+    background-image: url('../images/gameResult/newGameActive.png');
+    background-size: 100% 100%;
+    height: 18vw;   
+    margin-top: 7vw;
+}
+
+.medal{
+    width:10vw;
+    height:10vw;
+    float:right;
+    margin-right: 1vw;
+}
+.silver{
+
+}
+.bronze{
+
+}
+.divPlayerResult{
+    
+    margin-top: 9vw;
+
+}
+.medalDiv{
+    margin-top: 8vw;
+}
+.numberResult{
+    color: #fff;
+    font-size: 5vw;
+    width: 8%;
+    display: block;
+    float: left;
+}
+#numberResult{
+    padding-left: 2vw !important;
+    padding-top: 6vw !important;
+    padding-right: 2vw !important;
+}
+.gameResTd2{
+    width: 17%;
+    display: table-row;
+    float: left;
+}
+.gameResTd3{
+    width: 50%;
+    float: left;
+}
+.gameResTd4{
+    width: 9%;
+    float: left;
+    display: table-cell;
+}
+.gameResTd4 span{
+    margin-top: 9vw;
+}
+.gameResTd5{
+    width: 10.5%;
+    float: left;
+    display: table-cell;
+}
+.oneMedal{
+    width: 9vw;
+    height: 13vw;
+    position:absolute;
+    z-index:20;
+    left: 2vw;
+}
+.twoMedal{
+    width: 9vw;
+    height: 13vw;
+    position:absolute;
+    z-index:21;
+    right: 2vw;
+}
+.delBtn {
+    background-image: url('../images/edit/delButton.png');
+    background-size: 100% 100%;
+    width: 10vw;
+    height: 10vw;
+    display: inline;
+    float: right;
+}
+.okButton {
+    background-image: url('../images/next/OkButton.png');
+    background-size: 100% 100%;
+    /* background-color: inherit; */
+    /* border: none; */
+    height: 11vw;
+    width: 23vw;
+    float: right;
+    margin-right: 10vw;
+}
+.popup-buttons{
+    width: 40vw;
+    margin: 0 auto;
+}
+.resetButton {
+    background-image: url('../images/next/tarmacnel.png');
+    background-size: 100% 100%;
+    background-color: inherit;
+    border: none;
+    height: 11vw;
+    width: 23vw;
+    float: left;
+    margin-left: 10vw;
+}
+.spanNameDel{
+    float: left;
+    margin-left: 1vw;
+    margin-top: 7vw;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 36.5vw;
+    font-size: 4vw;
+}
+.popup {
+    background-image: url('../images/new/fb/bg.png');
+    background-size: 100% 100%;
+}
+.backButtton {
+    background-image: url('../images/backButton.png');
+    background-size: 100% 100%;
+    height:10vw;
+    width:10vw;
+}
+.backButttonTop {
+    background-image: url('../images/backButtonTop.png');
+    background-size: 100% 100%;
+    height: 10vw;
+    width: 10vw;
+}
+.timerIcon{
+    width: 15vw;
+    height: 15vw;
+    float: left;
+    margin-right: 4vw;
+}
+.divTimer{
+    width: 80vw;
+    margin: 14vw auto;
+}
+.esayIconReset{
+    background-image: url('../images/gameView/easyButtonReset.png')
+}
+.normalIconReset{
+    background-image: url('../images/gameView/normalButtonReset.png')
+}
+.hardIconReset{
+    background-image: url('../images/gameView/hardButtonReset.png')
+}
+.textParcent{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 4.5vw;
+}
+.textSountTime{
+    color:#fff0a5;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 4.5vw;
+}
+.timerInput {
+    width: 20vw;
+    background-image: url('../images/settings/rectangleTime.png');
+    background-size:100% 100%;
+    height: 15vw;
+    border: none;
+    background-color: transparent;
+}
+#timerInput{
+    padding-left: 2vw;
+    margin: 0 auto;
+    font-size: 6vw;
+    text-align: center;
+    width: 20vw;
+    height: 10vw;
+}
+
+#textSoundName{
+    text-align: right;
+    margin-right: 1vw;
+}
+.timerDivText{
+    height: 15vw;
+    width: 40vw;
+    position: relative;
+}
+.soundCheckboxDiv{
+    /*width: 80vw;*/
+}
+.soundIcon{
+    width: 15vw;
+    height: 15vw;
+    float: right;
+    margin-left: 4vw;
+}
+#checkboxSound{
+    float:right
+}
+.newWord {
+    background-image: url('../images/settings/gnelButton.png');
+    background-size:100% 100%;
+    width: 33vw;
+    height: 16vw;
+    margin-top: 8vw;
+}
+.divTimerSound{
+    float:left;
+    width: 40vw;
+    height: 15vw;
+}
+#soundCheck{
+    margin-top: 0vw;
+    padding: 0px 0px;
+}
+
+.delPlayerCtrl{
+    width: 58vw;
+    margin: 0 auto;
+}
+
+.easyDivParcent{
+    width:30vw;
+    position:relative;
+    margin-left: 1vw;
+}
+.bgSettingsIcon{
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    z-index: 4;
+    left: 0;
+}
+.easySettingsIcon {
+    width: 30vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 5;
+    background-image: url('../images/settings/green.png');
+    background-size: cover;
+    background-position: bottom;
+    bottom: 0;
+    /*-webkit-clip-path: inset(100% 0 0 0);
+    clip-path: inset(100% 0 0 0);*/
+}
+.maskSettingsIcon{
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+    z-index: 6;
+}
+.normalDivParcent{
+    width:30vw;
+    position:relative;
+}
+.normalSettingsIcon {
+    width: 30vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 5;
+    background-image: url('../images/settings/yelov.png');
+    background-size: cover;
+    background-position: bottom;
+    bottom: 0;
+    /*-webkit-clip-path: inset(100% 0 0 0);
+    clip-path: inset(100% 0 0 0);*/
+}
+.hardDivParcent{
+    width:30vw;
+    position:relative;
+}
+.hardSettingsIcon {
+    width: 30vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 5;
+    background-image: url('../images/settings/red.png');
+    background-size: cover;
+    background-position: bottom;
+    bottom: 0;
+    /*-webkit-clip-path: inset(100% 0 0 0);
+    clip-path: inset(100% 0 0 0);*/
+}
+.soundeCheckbox {
+    background-image: url('../images/settings/rectangleSound.png') !important;
+    background-size: 100% 100% !important;
+    width:12vw;
+    height:12vw;
+    float: left;
+}
+.shereButton {
+    background-image: url('../images/preparingGame/share.png');
+    background-size: 100% 100%;
+    height: 17vw;
+    width: 24vw;
+    margin-top: 0.5vw;
+    float: right; 
+}
+.divStepResGo{
+    margin-top: 9vw;
+}
+.divShere{
+    width:52vw;
+    margin:0 auto;
+}
+.shereTop{
+    margin-top:7vw;
+}
+#myCanvas{
+    width: 55vw;
+    position: absolute;
+    right: -8.5vw;
+    top: 23vw;
+    z-index: 5;
+}
+.imgBgTimer{
+    position: absolute;
+    right: 14vw;
+    top: 30vw;
+    z-index: 4;
+    width: 10vw;
+    height: 10vw;
+}
+.bgDelPlayer{
+    position: fixed;
+    top: 0px;
+    /* left: -12px; */
+    height: 100vh;
+    width: 100vw;
+    background: rgba(15,15,15,0.5);
+}
+.bgDivDelPlayer{
+    background-image: url('../images/new/fb/bg.png');
+    background-size: 100% 100%;
+    width: 80vw;
+    height: 96vw;
+    margin: 50vw auto;
+    padding: 2vw;
+}
+.divImgDelPlayer{
+    width: 50px;
+}
+.tdDelImg{
+    width: 18.5%;
+}
+.tdDelPlayerName{
+    width: 64.5%;
+    float: left;
+}
+.tdDeletButton{
+    width: 17%;
+    float: right;
+    margin-top: 3vw;
+}
+.divButtonResetOk{
+    margin-top: 2vw;
+}
+.scrolDivDeletPl {
+    width: 76vw;
+    height: 33.5vh;
+    background-image: url('../images/next/bgDelPlayer.png');
+    background-size: 100% 100%;
+}
+.scrolDiv2DeletPl{
+    width: 76vw;
+    height: 34.5vh;
+    padding-top: 0vh;
+}
+.scrolSizeDeletPl{
+    width: 76vw;
+    height: 33.5vh;
+}
+.tableNextDel{
+    border-spacing: 12px;
+    width: 74vw;
+    border-collapse: separate;
+}
+#newWord:focus{
+    outline: none;
+}
+.teameEqual{
+    font-size: 3vw;
+    margin-top: 3vw;
+    color: #fff;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+}
+.equal{
+    color: red;
+}
+.bgInputQuantity{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index:20;
+    background: rgba(15,15,15,0.5);
+}
+.inputDivQuantity {
+    width: 53%;
+    height: 35vw;
+    margin: 50vw auto;
+    background: url('../images/new/fb/bg.png');
+    background-size: 100% 100%;
+    border-radius: 9px;
+}
+.nameQuantityPopup{
+    color:#fff;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    padding-top: 1vw;
+    font-size: 4vw;
+}
+#closebuttonQuantity{
+    position: absolute;
+    z-index: 1;
+    top: 52vw;
+    right: 26vw;
+    width: 6vw;
+    height: 6vw;
+}
+.quantityInput {
+    width: 20vw;
+    background-image: url('../images/settings/rectangleTime.png');
+    background-size:100% 100%;
+    height: 15vw;
+    border: none;
+    background-color: transparent;
+}
+#quantityInput{
+    padding-left: 2vw;
+    margin: 0 auto;
+    font-size: 6vw;
+    text-align: center;
+    width: 20vw;
+    height: 10vw;
+    margin-top: -1vw;
+}
+.bgInputTimer{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index:20;
+    background: rgba(15,15,15,0.5);
+}
+.inputDivTimer {
+    width: 53%;
+    height: 27vw;
+    margin: 50vw auto;
+    background: url('../images/new/fb/bg.png');
+    background-size: 100% 100%;
+    border-radius: 9px;
+}
+#closebuttonTimer{
+    position: absolute;
+    z-index: 1;
+    top: 52vw;
+    right: 26vw;
+    width: 6vw;
+    height: 6vw;
+}
+.nameTimerPopup{
+    color:#fff;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    padding-top: 1vw;
+    font-size: 4vw;
+}
+.timerSetting{
+    color:#fff0a5;
+    font-size: 5vw;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+}
+.hintPlay{
+    color:#fff;
+    font-family:ArTarumianHelveticaBold;
+    font-weight: bold;
+    font-size: 3.5vw;
+    width: 100vw;
+    margin-top: 1vw;
+    position: absolute;
+}
+.quantityDiv{
+    width: 10vw;
+    height: 10vw;
+    margin-top: 2vw;
+    padding-top: 1.5vw;
+    border: 3px solid red;
+    border-radius: 100px;
+    background: #fff0a5;
+}
+.quantityDivNext{
+    width: 13vw;
+    height: 10vw;
+    margin-top: 5vw;
+    padding-top: 1.5vw;
+    border: 3px solid red;
+    border-radius: 100px;
+    background: #fff0a5;
+}
+.endButton {
+    background-image: url('../images/gameView/elq.png');
+    background-size: 100% 100%;
+    height: 15vw;
+    width: 23vw;
+    float:right
+}
+.minError{
+    color: #000;
+    font-size: 3vw;
+}
+.maxError{
+    color: #000;
+    font-size: 3vw;
+}
+.minErrorloop{
+    color: #000;
+    font-size: 3.5vw;
+}
+.maxErrorloop{
+    color: #000;
+    font-size: 3.2vw;
+}

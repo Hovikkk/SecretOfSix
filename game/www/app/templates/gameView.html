@@ -1,0 +1,109 @@
+﻿<ion-view view-title="Game view" hide-nav-bar="true" can-swipe-back="false" ng-class="{easyMode:(cardMode==0), normalMode:(cardMode==1), hardMode:(cardMode==2)}">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" id="logoNew" alt="logo">
+            </div>
+            <div ng-show="resultShow">
+                <div class="teamPlayerTextGameView">
+                    <img class="teameIcon" ng-src="{{imgGV}}" alt="" />
+                    <div class="nameDivText">
+                        <!--<span>{{currectTeam.name}}</span>
+                        <span>{{currectMember.name}}</span>-->
+                    </div>
+                    <div class="imgPlayerGV">
+                        
+                        <img ng-src="{{currectMember.pic}}" class="gvToPlayPic" width="55" height="55" />
+                        <img ng-src="images/new/imageFrame.png" ng-click="takePicture(player)" class="img-responsive gvPlayerImgMask" alt="" width="55" height="55">
+                    </div>
+                    <div>
+                        <img src="images/gameView/time_frame.png" class="imgBgTimer" />
+                        <h3><timer countdown="1" interval="1000" finish-callback="finished()">{{countdown}}</timer></h3>
+                        <canvas id="myCanvas" width="578" height="250"></canvas>
+                    </div>
+                </div>
+                <p ng-show="resetErr">reset error</p>
+                <div class="tableDiv">
+                    <table cellpadding="0" cellspacing="0" border="0" class="table tableWidth" id="example">
+                        <tr class="odd gradeX" id="tableTrStyleGV" ng-class="{easyModeGV:((cardMode==0) && selected), normalModeGV:((cardMode==1) && selected), hardModeGV:((cardMode==2) && selected)} " ng-init="selected=false" ng-click="selectWords({{$index}});selected = !selected" ng-repeat="word in words">
+                            <th>{{word}}</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="timerDiv">
+                        <!--<h3><timer countdown="1" interval="1000" finish-callback="finished()">{{countdown}}</timer></h3>
+                        <canvas id="myCanvas" width="578" height="250"></canvas>-->
+                        <a class="col-xs-4 goToGVButton" ng-show="readyShow" ng-click="gameView()"></a>
+                        <a class="col-xs-4 endButton" ng-show="readyShow" ng-click="endView()"></a>
+                    </div>
+                    <div class="row back" id="back">
+                        <a class="backButtton" ng-click="back()"></a>
+                    </div>
+                    
+                </div>
+                <div class="divBlock" ng-show="divBlocked">
+                    <div class="imgTestDiv vcenter">
+                        <img ng-src="{{opponentMember.pic}}" class="readyToPlayPic" width="160" height="160" />
+                        <img ng-src="images/new/imageFrame.png" class="img-responsive readyPlayerImgMask" alt="" width="160" height="160">
+                    </div>
+                    <div class="teamPlayerText">
+                        <div class="teameNameIconDiv">
+                            <div class="vcenter divTeamNameReadToPlay">
+                                <div class="vcenter">
+                                    <span class="readyToPlayTeamName" id="readyToPlayTeamName">{{opponentTeam.name}}</span>
+                                    <div ng-show="teamIcon1" class="teamIcon1"><p>{{playerIndexNumber+1}}</p></div>
+                                    <div ng-show="teamIcon2" class="teamIcon2"><p>{{playerIndexNumber+1}}</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="readyToPlayPlayerName">{{opponentMember.name}}</span>
+                    </div>
+                    <div class="vcenter testCenter">
+                        <a class="col-xs-4 vcenter testTeame2" ng-click="closeDivBlock()"></a>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="readShow">
+                <div class="chechIconHeader vcenter">
+                    <img src="./images/gameView/stugIcon.png" class="chechIcon" />
+                    <p class="chechText">ՍՏՈՒԳԵԼ</p>
+                </div>
+                <table cellpadding="0" cellspacing="0" border="0" class="table tableWidth" id="example">
+                    <tr class="odd gradeX" id="tableTrStyleCheckGV" ng-class="{easyModeGV:((cardMode==0) && selected), normalModeGV:((cardMode==1) && selected), hardModeGV:((cardMode==2) && selected)}" ng-init="selected=false" ng-click="readSelectWords({{$index}});selected = !selected" ng-repeat="card in cards[number]">
+                        <th>{{card}}</th>
+                    </tr>
+                </table>
+                <div class="row">
+                    <a class="col-xs-4 confirmButton vcenter" ng-click="stepResult()"></a>
+                </div>
+            </div>
+            <div class="bg" ng-show="chooseReset">
+                <div class="resetDiv">
+                    <div class="row">
+                        <div class="resetButtonGV">
+                            <p class="resetText">բառերը վերջացել են սեխմեք զրոյացնել խաղը շարունակելու համար</p>
+                            <a ng-click="resetPopup()" class="resetGV"></a>
+                        </div>
+                    </div>
+                    
+                    <a ng-click="closePopup()" class="closeGV"></a>
+                </div>
+
+            </div>
+            <div class="bg" ng-show="pauseGame">
+                <div class="resetDiv">
+                    <div class="row">
+                        <div class="resetButtonGV">
+                            <p class="continueText">ցանկանում եք դուրս գալ ընթացիկ խաղից</p>
+                            <a ng-click="continueButton()" class="continueGV"></a>
+                            
+                        </div>
+                     </div>
+                    <a ng-click="closePopup()" class="closeGV"></a>
+                </div>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

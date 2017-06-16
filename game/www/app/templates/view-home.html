@@ -1,0 +1,52 @@
+﻿<ion-view view-title="Home" hide-nav-bar="true" can-swipe-back="false" >
+    <!--<ion-content class="padding">
+        <ion-refresher on-refresh="refresh(true)" spinner="android"></ion-refresher>
+        <ion-list>
+            <ion-item item="item">
+                Data goes here
+            </ion-item>
+        </ion-list>
+    </ion-content>-->
+    <ion-content class="padding " scroll="false" ng-load="onLoad()">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" alt="logo">
+            </div>
+            
+            <div class="row imgActive">
+                <a ng-click="gotoPlay()" href = "#/app/play" class="homePageImg buttonPlay vcenter col-xs-12"></a>
+            </div>
+            <div class="row imgActive">
+                <a ng-click="gotoRules()" href="#/app/rules" class="homePageImg rulesButton vcenter col-xs-12"></a>
+            </div>
+            <div class="row imgActive">
+                <a ng-click="gotoSettings()" href="#/app/setings" class="homePageImg settingsButton vcenter col-xs-12"></a>
+            </div>
+            <div class="row imgActive">
+                <a ng-show="!disabledFb && loginFb" ng-click="facebook()" href="#" class="homePageImg fbConect vcenter col-xs-12"></a>
+            </div>
+            <div class="row">
+                <a class="homePageImg fbLogoutButton vcenter col-xs-12" ng-show="!disabledFb && logoutFb" ng-click="fbLogout()"></a>
+            </div>
+            <div class="row">
+                <a class="homePageImg fbDisabledButton vcenter col-xs-12" ng-show="disabledFb"></a>
+            </div>
+            <div class="row imgActive">
+                <a ng-click="exitFromApp()" href="#i2" class="homePageImg exitButton vcenter col-xs-12" ></a>
+                
+            </div>
+            
+            
+        </div>
+        <div class="bgExit" id="bg_homeExit"  ng-show="exitGame">
+            
+            <div class="bgExitDiv">
+                <div class="vcenter centerDiv">
+                    <a ng-click="exitCancel(1)" class="yesButton"></a>
+                    <a ng-click="exitCancel(0)" class="noButton"></a>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

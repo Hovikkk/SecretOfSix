@@ -1,0 +1,74 @@
+﻿<ion-view view-title="New Teame" hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" id="logoPreparing" alt="logo">
+            </div>
+            
+            <div class="row">
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped tableTeameName  datatables" id="example">
+                    <tr class="teameNamePreparing">
+                        <th class="teameNameTh">
+                            <span class="teameSpan">{{teameFirst}}</span>
+                            <span class="teameSpan">{{teameSecond}}</span>
+                        </th>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="row">
+                <div class="scrolDivPre">
+                    <div class="scrolDiv2">
+                        <ion-scroll zooming="false" direction="y" class="scrolPreparing">
+                    
+                                <table cellpadding="0" cellspacing="0" border="0" class="table tableTeamePlayerPreparing" id="example">
+                                    <tr class="odd gradeX" ng-repeat="member in teamPlayers[0].members">
+                                        <td class="prepartingGameTd">
+                                            <div class="teamDiv1">
+                                                <div class="divPreparing">
+                                                    <img ng-src="{{member.pic}}" class="img-responsive imgPlayerPreparing" alt="Cinque Terre" width="50" height="50">
+                                                    <img ng-src="images/new/imageFrame.png" class="img-responsive preparingFrame" alt="Cinque Terre" width="50" height="50">
+
+                                                </div>
+                                                <span>{{member.name}}</span>
+                                            </div>
+                                        </td>
+                                        <td class="prepartingGameTd">
+                                            <div class="teamDiv1">
+                                                <div class="vcenter divPreparing">
+                                                    <img ng-src="{{teamPlayers[1].members[$index].pic}}" class="img-responsive imgPlayerPreparing" alt="Cinque Terre" width="50" height="50">
+                                                    <img ng-src="images/new/imageFrame.png" class="img-responsive preparingFrame" alt="Cinque Terre" width="50" height="50">
+
+                                                </div>
+                                                <span>{{teamPlayers[1].members[$index].name}}</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                    
+                        </ion-scroll>
+                    </div>
+                </div>
+                    
+            </div>
+            <ion-scroll zooming="false" direction="y" class="preparingText" style="width: 85vw; height: 100px">
+                <div class="row prepScrolText">
+                    Խաղում ներառված են {{esayPreparting}}բառերը, խաղը ընթանալու է {{stepPreparting}} շրջան <br />
+                    Տվյալ էջում ցուցադրվում է առաջին մասնակցի տվյալներ՝ թիմի անունը և խաղացողի անուն-զգանունը: Սեղվելով ԱՌԱՋ կոճակը առաջին մասնակիցը կսկսի խաղը:
+                </div>
+            </ion-scroll>
+            <div class="row">
+                <a class="col-xs-4 vcenter gotoButton" ng-click="starGame()" ng-show="!shereShow"></a>
+            </div>
+            <div class="row">
+                <div class="divShere">
+                    <a class="col-xs-4 vcenter gotoButton" ng-click="starGame()" ng-show="shereShow"></a>
+                    <a class="col-xs-4 vcenter shereButton" ng-click="sherePlayer()" ng-show="shereShow"></a>
+                </div>
+            </div>
+            <div class="row back" id="back">
+                <a class="backButtton" ng-click="back()"></a>
+            </div>
+        </div>
+</ion-content>
+</ion-view>

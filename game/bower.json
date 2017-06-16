@@ -1,0 +1,6 @@
+{
+    "name": "game",
+  "dependencies": {
+    "xor-crypt": "1.0.0"
+  }
+}

@@ -1,0 +1,108 @@
+﻿<ion-view view-title="Setings" hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" alt="logo">
+            </div>
+            <div class="container text-center">
+                <!--<div class="row">
+                    <div class="easypiechart" id="easypercent" data-percent="0" data-scale-color="#ffb400">
+                        <span class="percent"></span><span>%</span>
+                    </div>
+                    <div class="easypiechart" id="normalpercent" data-percent="0" data-scale-color="#ffb400">
+                        <span class="percent"></span><span>%</span>
+                    </div>
+                    <div class="easypiechart" id="hardpercent" data-percent="0" data-scale-color="#ffb400">
+                        <span class="percent"></span><span>%</span>
+                    </div>
+                </div>-->
+                <div class="row">
+                    <div class="easyDivParcent">
+                        <p class="textParcent">ՀԵՇՏ</p>
+                        <img src="images/settings/bg.png" class="bgSettingsIcon" />
+                        <!--<img src="images/settings/green.png" class="easySettingsIcon" />-->
+                        <div class="easySettingsIcon"></div>
+                        <img src="images/settings/frame.png" class="maskSettingsIcon" />
+                    </div>
+                    <div class="normalDivParcent">
+                        <p class="textParcent">ՆՈՐՄԱԼ</p>
+                        <img src="images/settings/bg.png" class="bgSettingsIcon" />
+                        <!--<img src="images/settings/yelov.png" class="normalSettingsIcon" />-->
+                        <div class="normalSettingsIcon"></div>
+                        <img src="images/settings/frame.png" class="maskSettingsIcon" />
+                    </div>
+                    <div class="hardDivParcent">
+                        <p class="textParcent">ԴԺՎԱՐ</p>
+                        <img src="images/settings/bg.png" class="bgSettingsIcon" />
+                        <!--<img src="images/settings/red.png" class="hardSettingsIcon" />-->
+                        <div class="hardSettingsIcon"></div>
+                        <img src="images/settings/frame.png" class="maskSettingsIcon" />
+                    </div>
+                </div>
+                <div class="row resetSettings">
+                    <a class="col-xs-4 vcenter easySettings" id="updatePieCharts" ng-click="reset('easy')" href="#"></a>
+                    <a class="col-xs-4 vcenter normalSettings" id="updatePieCharts" ng-click="reset('normal')" href="#"></a>
+                    <a class="col-xs-4 vcenter hardSettings" id="updatePieCharts" ng-click="reset('hard')" href="#"></a>
+                </div>
+                <div class="row">
+                    <div class="form-group divTimer">
+                        <div class="divTimerSound" >
+                            <p class="textSountTime">ԺԱՄԱՆԱԿ</p>
+                            <div class="divTimerBlock" ng-click="timerPopup()">
+                                <img src="images/settings/timeIcon.png" class="timerIcon" />
+                                <div class="timerDivText">
+
+                                    <p class="timerSetting">{{minute + "ր. " + second+ "վրկ."}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divTimerSound">
+                            <p class="textSountTime" id="textSoundName">ՁԱՅՆ</p>
+                            <img src="images/settings/soundIcon.png" class="soundIcon" ng-click="saveSound()" ng-show="soundActiv"/>
+                            <img src="images/settings/soundNone.png" class="soundIcon" ng-click="saveSound()" ng-show="soundNone"/>
+                            <!--<input type="checkbox" ng-model="soundChecked.value" ng-click="saveSound()" class="soundeCheckbox" id="checkboxSound" value="">--> 
+                            
+                            
+                        </div>
+                            
+                        
+                        
+                    </div>
+                    <!--<div class="row">
+                        <a class="col-xs-4 vcenter btn btn-danger btn-lg" id="updatePieCharts" ng-model="num" ng-click="saveTimer(num)">Save</a>
+                    </div>-->
+                </div>
+                <!--<div class="row">
+                    <div class="soundcheckbox checkbox col-xs-6">
+                        <label><input type="checkbox" ng-model="soundChecked.value" ng-click="saveSound()" value=""><h2 class="soundH4 col-xs-12">sound</h2></label>
+                    </div>
+                </div>-->
+            
+                    <!--<ul class="pager col-xs-10">
+                        <li><h4 class="timer col-xs-4.5">Timer</h4></li>
+                        <li><a class="btn btn-default navbar-btn hours col-xs-2.5">00</a></li> :
+                        <li><a class="btn btn-default navbar-btn min col-xs-2.5">00</a></li> :
+                        <li><a class="btn btn-default navbar-btn sec col-xs-2.5">00</a></li>
+                    </ul>-->
+                
+            
+                <!--<div class="row">
+                    <a class="col-lg-12 col-md-12 col-sm-12 col-xs-12 vcenter btn btn-primary btn-lg" ng-click="fbLogout">connect with FB</a>
+                </div>-->
+                <div class="row">
+                    <a class="vcenter newWord" id="newWord" href="#" ng-show="newWord"></a>
+                </div>
+                <div class="bgInputTimer" ng-show="timerShow">
+                    <div class="inputDivTimer">
+                        <p class="nameTimerPopup">Նշանակեք խաղի ժամանակը</p>
+                        <input type="number" min="0" max="300" maxlength="3"  ng-pattern="/^\d+$/"  ng-model="num" name="timerField" class="form-control timerInput quantity" id="timerInput">
+                    </div>
+                    <a id="closebuttonTimer" class="closeButtonNew" ng-click="closePopupTimer()"></a>
+                </div>
+                <div class="row back" id="back">
+                    <a class="backButtton" ng-click="back(num)"></a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,70 @@
+﻿<ion-view view-title="step result" hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" id="logoNew" alt="logo">
+            </div>
+            <div class="row">
+                <table cellpadding="0" cellspacing="0" border="0" class="table tableTeameHeader">
+                    <tr class="teameNamePreparing">
+                        <th class="teameNameTh">
+                            <span class="teameSpanStepResult teameSpan1">{{teameFirst}}</span>
+                            <span class="teameSpanStepResult teameSpan2">{{teameSecond}}</span>
+                        </th>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="row">
+                <div class="scrolDivStep">
+                    <div class="scrolDiv2">
+                        <ion-scroll zooming="false" direction="y" class="scrolPreparing">
+                            <table cellpadding="0" cellspacing="0" border="0" class="table" id="stepPlayerResult">
+                                <tr class="odd gradeX" ng-repeat="result in results">
+                                    <td class="tdStepResult">
+                                        <img ng-src="{{result[0].pic}}" class="img-responsive imgPlaer1" alt="Cinque Terre">
+                                        <img ng-src="images/new/imageFrame.png" class="img-responsive stepResultFrame" alt="Cinque Terre">
+                                        <div class="totalXpDiv">
+                                            <span class="totalXp"> {{result[0].totalXp}}</span>
+                                        </div>
+                                        <p class="tamePlayerStepRes">{{result[0].name}}</p>
+                                        <span class="xpTeamStepResult" id="xpTeamStepResult1">{{result[0].xp}}</span>
+                                    </td>
+                                    <td class="tdStepResult" id="stepResultTd">
+                                        <img ng-src="{{result[1].pic}}" class="img-responsive imgPlaer2" alt="Cinque Terre">
+                                        <img ng-src="images/new/imageFrame.png" class="img-responsive stepResultFrame" alt="Cinque Terre">
+                                        <div class="totalXpDiv">
+                                            <span class="totalXp"> {{result[1].totalXp}}</span>
+                                        </div>
+                                        <p class="tamePlayerStepRes tamePlayerStepRes2">{{result[1].name}}</p>
+                                        <span class="xpTeamStepResult" id="xpTeamStepResult">{{result[1].xp}}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ion-scroll>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table cellpadding="0" cellspacing="0" border="0" class="table tableStepResult" id="tableStepResult">
+                    <tr>
+                        <td class="tableStepResultTd"><span> {{teamsTotalXp[0]}}</span></td>
+                        <td class="tableStepResultTd"><span> {{teamsTotalXp[1]}}</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row">
+                <a class="col-xs-4 vcenter goToStepResult" ng-click="gameView()" ng-show="!shereShow"></a>
+
+            </div>
+            <!--<p>SR playing {{currectTeam.name}} player {{currectMember.name}}</p>-->
+            <!--<p>{{pointsScored}}</p>-->
+            <div class="row divStepResGo">
+                <div class="divShere">
+                    <a class="col-xs-4 vcenter goToStepResult" ng-click="gameView()" ng-show="shereShow"></a>
+                    <a class="col-xs-4 vcenter shereButton" ng-click="sherePlayer()" ng-show="shereShow"></a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

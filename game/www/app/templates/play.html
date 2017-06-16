@@ -1,0 +1,58 @@
+﻿<ion-view view-title="Play" data-ng-init="init()" hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" alt="logo">
+            </div>
+            <div class="row vcenter">
+                <div class ="newGroupText vcenter">
+                    <h3 class="playH3 " ng-show="newPageShow">ՍՏԵՂԾԵԼ ԽՈՒՄԲ</h3>
+                    <img ng-class ="{newGroupIcon: newPageShow}" src="images/play/grupIcon.png" ng-show="newPageShow" alt="grup icon"  />
+                </div>
+            </div>
+            <div class="row">
+                <a class="playPageImgNew newButton vcenter col-xs-12" ng-click="new()" ng-show="newPageShow"></a>
+            </div>
+            <div class="row">
+                <img src="images/play/grupIcon.png" alt="grup icon" ng-show="newPageHide" class="grupIcon vcenter" />
+            </div>
+            <div class="row">
+                <h2 class="playH2 vcenter" ng-show="newPageHide">ՍՏԵՂԾԵԼ ԽՈՒՄԲ</h2>
+            </div>
+            <div class="scrolDiv" ng-show="newPageShow">
+                <div class="scrolDiv2">
+                    <ion-scroll zooming="false" direction="y" class="scrolSize" >
+                        <table cellpadding="0" cellspacing="0" border="0" class="table tablePlay vcenter   datatables" id="example">
+
+
+                            <tr class="odd gradeX" ng-class="{selectedTr:selected}" ng-init="selected=false" ng-click="select({{$index}});selected = !selected" ng-repeat="team in teams">
+                                <td class="tdPlayTeameNameCount"><div class="teamNameDivPlay">{{team.name}}</div><div class="playTeameCount">{{team.members.length}}</div></td>
+                                
+                            </tr>
+
+                        </table>
+                    </ion-scroll>
+                </div>
+            </div>
+            <div class="row">
+                <a class="homePageImg newButton vcenter col-xs-12" ng-click="new()" ng-show="newPageHide"></a>
+                
+            </div>
+            
+            <div class="row">
+                <p class="hintPlay" ng-show="hintText">ընտրեք 2 թիմ խաղը շարունակելու համար</p>
+            </div>
+            <div class="row">
+                <!--<div class="vcenter buttonPlayknopki">-->
+                    
+                <a class="playPageImg deleteButton" ng-click="delete()" ng-show="deleteShow"></a>
+                <a class="playPageImg nextButton" ng-show="nextShow" ng-click="next()"></a>
+                <a class="playPageImg editButton" ng-click="edit()" ng-show="editShow"></a>
+                <!--</div>-->
+            </div>
+            <div class="row back" id="back">
+                <a class="backButtton" ng-click="back()"></a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

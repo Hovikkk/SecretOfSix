@@ -1,0 +1,99 @@
+﻿<ion-view view-title="game result" hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" id="logoNew" alt="logo">
+            </div>
+            <p class="resultHeaderText">ԱՐԴՅՈՒՆՔՆԵՐ</p>
+            <div class="scrolDivResult">
+                <div class="scrolDiv2">
+                    <ion-scroll zooming="false" direction="y" class="scrolResult">
+                        <!--<table cellpadding="0" cellspacing="0" border="0" class="table " id="resultGameTable">
+                            <tr class="odd gradeX" ng-click="select()" ng-repeat="ratingPlayer in ratingPlayers">
+                                <td class="numberResult" id="numberResult" style="width: 8%">{{$index+1}}</td>
+                                <td class="gameResTd2" style="width: 17%">
+                                    <img ng-src="{{ratingPlayer.pic}}" class="img-responsive imgRatingPlayer" alt="Cinque Terre" width="60" height="60">
+                                    <img ng-src="images/new/imageFrame.png" class="img-responsive stepResultFrame" alt="Cinque Terre" width="60" height="60">
+                                </td>
+                                <td class="gameResTd3" style="width: 50%">
+                                    <div class="divPlayerResult">
+                                        <span class="ratingPlayerName">{{ratingPlayer.name}}</span>
+                                    </div>
+                                </td>
+                                <td class="gameResTd4" style="width: 13%">
+                                    <span class="ratingPlayerTotalXp">{{ratingPlayer.totalXp}}</span>
+                                </td>
+                                <td class="gameResTd5" style="width: 12%">
+                                    <div class="medalDiv">
+                                        <img src="images/gameResult/medal/gold.png" class="medal gold" ng-show="$index == 0" />
+                                        <img src="images/gameResult/medal/arcat.png" class="medal silver" ng-show="$index == 1" />
+                                        <img src="images/gameResult/medal/bronz.png" class="medal bronze" ng-show="$index == 2" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>-->
+                        <table cellpadding="0" cellspacing="0" border="0" class="table " id="resultGameTable">
+                            <tr class="odd gradeX" ng-click="select()" ng-repeat="ratingPlayer in ratingPlayers">
+                                <td class="numberResult" id="numberResult">{{$index+1}}</td>
+                                <td class="gameResTd2">
+                                    <img ng-src="{{ratingPlayer.pic}}" class="img-responsive imgRatingPlayer" alt="Cinque Terre">
+                                    <img ng-src="images/new/imageFrame.png" class="img-responsive stepResultFrame" alt="Cinque Terre">
+                                </td>
+                                <td class="gameResTd3">
+                                    <div class="divPlayerResult">
+                                        <span class="ratingPlayerName">{{ratingPlayer.name}}</span>
+                                    </div>
+                                </td>
+                                <td class="gameResTd4">
+                                    <span class="ratingPlayerTotalXp">{{ratingPlayer.totalXp}}</span>
+                                </td>
+                                <td class="gameResTd5">
+                                    <div class="medalDiv">
+                                        <img src="images/gameResult/medal/gold.png" class="medal gold" ng-show="$index == 0" />
+                                        <img src="images/gameResult/medal/arcat.png" class="medal silver" ng-show="$index == 1" />
+                                        <img src="images/gameResult/medal/bronz.png" class="medal bronze" ng-show="$index == 2" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </ion-scroll>
+                </div>
+            </div>
+            <div class="resultBottomDiv">
+                <img src="images/gameResult/medal/medal.png" class="oneMedal" ng-show="medalOne"/>
+                <img src="images/gameResult/medal/medal.png" class="twoMedal" ng-show="medalTwo" />
+                <div class="resultBottom">
+                    <div class="teameDiv">
+                        <span class="teameName1">{{teamName1}}</span>
+                    </div>
+                    <div class="teameDiv">
+                        <span class="teameName2">{{teamName2}}</span>
+                    </div>
+                </div>
+                
+                <div class="resultBottom" id="resultBottom">
+                    <div class="teameDiv teameDivScore">
+                        <span class="teameResult1">{{team1}}</span>
+                    </div>
+                    <div class="teameDiv teameDivScore">
+                        <span class="teameResult2">{{team2}}</span>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!--<p>{{teamName1}}_{{team1}} - {{teamName2}}_{{team2}}</p>
+            <p>{{team1}}{{symbol}}{{team2}}</p>-->
+            
+            <div class="row">
+                <a class="col-xs-4 vcenter newGameResult" ng-click="newGame()" ng-show="!shereShow"></a>
+            </div>
+            <div class="row">
+                <div class="divShere shereTop">
+                    <a class="col-xs-4 vcenter newGameResult" id="newGameResult" ng-click="newGame()" ng-show="shereShow"></a>
+                    <a class="col-xs-4 vcenter shereButton" ng-click="sherePlayer()" ng-show="shereShow"></a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

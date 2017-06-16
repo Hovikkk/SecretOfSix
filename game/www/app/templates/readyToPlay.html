@@ -1,0 +1,32 @@
+﻿<ion-view view-title="Game setings" hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" alt="logo" id="readyLogo">
+            </div>
+            <div class="imgReadeToPlay vcenter">
+                <img ng-src="{{currectMember.pic}}" class="readyToPlayPic" width="160" height="160" />
+                <img ng-src="images/new/imageFrame.png" ng-click="takePicture(player)" class="img-responsive readyPlayerImgMask" alt="" width="160" height="160">
+            </div>
+            <div class="teamPlayerText">
+                <div class="teameNameIconDiv">
+                    <div class="vcenter divTeamNameReadToPlay">
+                        <div class="vcenter">
+                            <span class="readyToPlayTeamName" id="readyToPlayTeamName">{{currectTeam.name}}</span>
+                            <div ng-show="teamIcon1" class="teamIcon1"><p>{{playerIndexNumber+1}}</p></div>
+                            <div ng-show="teamIcon2" class="teamIcon2"><p>{{playerIndexNumber+1}}</p></div>
+                        </div>
+                    </div>
+                </div>
+                <span class="readyToPlayPlayerName">{{currectMember.name}}</span>
+            </div>
+            
+            <div class="row">
+                <div class="vcenter readyToPlayButton">
+                    <a class="col-xs-4  readyGoToButton" ng-click="gameView()"></a>
+                    <a class="col-xs-4  readyEndGameButton" ng-click="endGame()"></a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

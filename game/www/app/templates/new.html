@@ -1,0 +1,104 @@
+﻿<ion-view view-title="New Teame" hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" id="logoNew" alt="logo">
+                
+            </div>
+            <div class="row">
+                <h3 class="teamName">ԱՆՈՒՆ</h3>
+                <h4 class="teamCount">ՔԱՆԱԿ</h4>
+            </div>
+            <div class="row">
+                <div class="teamNameDiv">
+                    <input ng-model="namePlayer" maxlength="13" name="nameTeame" class="form-control teamNameInput" placeholder="name">
+                </div>
+                <div class="quantityDiv" ng-click="popupQuantity()">{{countPlayer.toString()}}</div>
+                <!--<ul class="pager owerNumeric" id="player_count"></ul>
+                <div class="arrow">
+                    <img src="images/new/up.png" class="arrowIcon" alt=""/>
+                    <div class="circle vcenter"></div>
+                    <img src="images/new/down.png" class="arrowIcon" alt=""/>
+                </div>-->
+                <img src="images/new/groupIconNew.png" alt="grup icon" class="grupIconNew" />
+            </div>
+            <!--<div class="row">
+            <input ng-pattern="/^\d+$/" id="countNum" type="number" name="example_name" ng-change="setPlayerCount(countPlayer)" ng-model="countPlayer" min="1" max="10" class="form-control" placeholder="name">
+        </div>-->
+            <!--<div class="row">
+            <input type="range" id="example_id" ng-change="setPlayerCount(countPlayer)" ng-model="countPlayer" name="example_name" min="1" max="10" />
+        </div>-->
+            <!--<div dropdown-select="countPlayerNum"
+             dropdown-model="countPlayer"
+             dropdown-item-label="text">
+        </div>-->
+                    <!--<button class="button button-full button-positive" ng-click="getImageSaveContact()">
+                        Get Image and Save a Contact with It
+                    </button>
+                    <img ng-src="{{collection.selectedImage}}" style="width:100%; height: auto;" />-->
+            <div class="scrolDiv">
+                <div class="scrolDiv2">
+                    <ion-scroll zooming="false" direction="y" class="scrolSize">
+                        <div class="row" ng-repeat="player in players">
+                            <!--<img ng-src="{{player.imgURI}}" ng-show="imgURI !== undefined"  class="img-responsive" alt="Cinque Terre" width="60" height="20">-->
+                            <img ng-src="{{player.pic}}" ng-click="takePicture(player)" class="img-responsive playerImg" alt="">
+                            <img ng-src="images/new/imageFrame.png" ng-click="takePicture(player)" class="img-responsive playerImgMask"  alt="">
+                            <div class="playerNameDiv">
+                                <input type="text" placeholder="name" class="form-control playerName" ng-model="player.name" maxlength="25" />
+                            </div>
+                          <!--  <a ng-click="fbConect($index)" class="editfbPlayer" ng-show="fbShow"></a>-->
+                            <a ng-click="fbConect($index)" class="editfbPlayer" ng-show="fbShow"></a>
+                        </div>
+                    </ion-scroll>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <a class="homePageImg saveNewButton vcenter col-xs-4" ng-click="save(countPlayer, namePlayer)"></a>
+            </div>
+            <div class="bgInputQuantity" ng-show="quantityShow">
+                <div class="inputDivQuantity">
+                    <p class="nameQuantityPopup">Նշանակեք թիմի խաղացողների քանակը</p>
+                    <input type="number" min="2" max="8" maxlength="1" ng-pattern="/^\d+$/" ng-model="countPlayer" name="quantityField" class="form-control quantityInput quantityTeame" id="quantityInput">
+                    <p class="minError" ng-show="minShow">նվազագույն խաղացողների քանակը 2</p>
+                    <p class="maxError" ng-show="maxShow">առավելագույն խաղացողների քանակը 8</p>
+                </div>
+                <a id="closebuttonQuantity" class="closeButtonNew" ng-click="closePopupQuantity()"></a>
+            </div>
+            <div class="row back" id="back">
+                <a class="backButtton" ng-click="back()"></a>
+            </div>
+        </div>
+        <div class="bg" ng-show="chooseSource">
+            <div class="popupFoto">
+                <div class="popupFotoDiv">
+                    <a ng-click="popupPhoto(1)" class="cameraButton vcenter"></a>
+                    <a ng-click="popupPhoto(0)" class="galleryButton vcenter"></a>
+                </div>
+            </div>
+            <a id="closebutton" class="closeButton" ng-click="closePopup()"></a>
+        </div>
+        <div class="bgFb" ng-show="fbConectShow">
+            
+            <div class="friendConect">
+                <ul class="vcenter">
+                    <li class="active vcenter divNewfbButton"><a href="#" data-toggle="tab" class="playing" ng-click="popupfb(0)"></a></li>
+                    <li class="vcenter divNewfbButton"><a href="#" data-toggle="tab" ng-click="popupfb(1)" class="allFriends"></a></li>
+                </ul>
+                <!--<button ng-click="popupfb(0)">In Game</button>
+                <button ng-click="popupfb(1)">All</button>-->
+            </div>
+            <ion-scroll zooming="false" direction="y" class="scrollFb">
+                <div class="allFriendfb" ng-repeat="friend in friends" ng-show="allFriend">
+                    <img ng-src="{{friend.pic}}" class="img-responsive imgTest" id="playerImg" alt="Cinque Terre" width="50" height="50">
+                    <img ng-src="images/new/imageFrame.png" class="img-responsive playerImgMaskTest" alt="">
+                    <div class="divNameFb">
+                        <p ng-model="friend.name" class="fbFreandsName">{{friend.name}}</p>
+                        <a ng-click="fbAddFriend($index)" class="addFbFrends"></a>
+                    </div>
+                </div>
+            </ion-scroll>
+            <a id="closebuttonNew" class="closeButtonNew" ng-click="closeFbPopup()"></a>
+        </div>
+    </ion-content>
+</ion-view>

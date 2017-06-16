@@ -1,0 +1,16 @@
+﻿<div ng-controller="delPlayerCtrl">
+    <p>your player {{members.length}}</p>
+    <div ng-repeat ="member in members">
+        <img ng-src="{{member.pic}}" class="img-responsive delPlayerPic" alt="Cinque Terre" width="50" height="50">
+        <img ng-src="images/new/imageFrame.png" class="img-responsive readyPlayerImgMask" alt="" width="50" height="50">
+        <span class="spanNameDel">{{member.name}}</span>
+        
+            <a class="delBtn" ng-click="del($index)" ng-show="delShow"></a>
+        
+
+    </div>
+
+
+    <a class="btn reset1Button" ng-click="reset()"></a>
+</div>
+

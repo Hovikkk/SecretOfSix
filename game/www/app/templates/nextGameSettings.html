@@ -1,0 +1,110 @@
+﻿<ion-view view-title="Game setings" hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding" scroll="false">
+        <div class="container text-center" id="container">
+            <div class="row">
+                <img src="images/logo.png" class="logo" alt="logo">
+            </div>
+            
+            <div class="vcenter checkboxButt">
+                <div class="row">
+                    <div class="soundcheckbox checkbox easy checkboxButton">
+                        <label>
+                            <input type="checkbox" ng-model="checkbox.e" ng-checked="easy">
+                            <h3 class="enhH3 col-xs-12">ՀԵՇՏ</h3>
+                        </label>
+                        <img src="images/next/easyIcon.png" class="easyIcon" width="80">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="soundcheckbox checkbox normal checkboxButton">
+                        <label>
+                            <input type="checkbox" ng-model="checkbox.n">
+                            <h3 class="enhH3 col-xs-12">ՆՈՐՄԱԼ</h3>
+                        </label>
+                        <img src="images/next/normalIcon.png" class="normalIcon" width="80">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="soundcheckbox checkbox hard checkboxButton">
+                        <label>
+                            <input type="checkbox" ng-model="checkbox.h">
+                            <h3 class="enhH3 col-xs-12">ԴԺՎԱՐ</h3>    
+                        </label>
+                        <img src="images/next/hardIcon.png" class="hardIcon" width="80">
+                    </div>
+                </div>
+            </div>
+            <div class="row col-xs-12 divCount">
+                <div class="divLoop">
+                    <h4 class="loopCountGame">ԽԱՂԵՐԻ ՔԱՆԱԿ</h4>
+                    <!--<select ng-model="step"  ng-change="selectLoop(step)" class="form-control">
+            <option  ng-repeat="count in [1,2,3,4,5,6,7,8,9,10]">{{count}}</option>
+        </select>-->
+                    <!--<ul class="pager owerNumeric vcenter" id="loopCount"></ul>
+                    <div class="arrow" id="arrowDiv">
+                        <img src="images/new/up.png" class="arrowIcon" alt="" />
+                        <div class="circle vcenter"></div>
+                        <img src="images/new/down.png" class="arrowIcon" alt="" />
+                    </div>-->
+                    <div class="quantityDivNext" ng-click="nextPopupQuantity()">{{step}}</div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <p ng-show="!checkbox.h && !checkbox.e && !checkbox.n" class="errorENH">ընտրեք առնվազն մեկ տարբերակ</p>
+            </div>
+            <div class="row">
+                <a class="col-xs-4 vcenter nextLevelButton" ng-click="preparingGame()"></a>
+            </div>
+            <div class="bgInputQuantity" ng-show="nextQuantityShow">
+                <div class="inputDivQuantity">
+                    <p class="nameQuantityPopup">Նշանակեք խաղերի քանակը</p>
+                    <input type="number" min="1" max="10" maxlength="2" ng-pattern="/^\d+$/" ng-model="step" name="quantityField" class="form-control quantityInput quantityGame" id="quantityInput">
+                    <p class="minErrorloop" ng-show="minErrorloop">նվազագույն խաղերի քանակը 1</p>
+                    <p class="maxErrorloop" ng-show="maxErrorloop">առավելագույն խաղերի քանակը 10</p>
+                </div>
+                <a id="closebuttonQuantity" class="closeButtonNew" ng-click="closePopupQuantity()"></a>
+            </div>
+            <div class="row back" id="back">
+                <a class="backButtton" ng-click="back()"></a>
+            </div>
+            <div class="bgDelPlayer" ng-show="delPlayerDivShow">
+                <div class="bgDivDelPlayer">
+                    <!--<p>your player {{members.length}}</p>-->
+                    <p class="teameEqual">թիմերի խաղացողների քանակը անհավասար է <span><br />որպէսզի կարողանաք խաղը շարունակել <span class="equal">հավասարեցրեք</span></span></p>
+                    
+                    <!--<div ng-repeat="member in members">
+                        <div class="divImgDelPlayer">
+                            <img ng-src="{{member.pic}}" class="img-responsive delPlayerPic" alt="Cinque Terre" width="50" height="50">
+                            <img ng-src="images/new/imageFrame.png" class="img-responsive readyPlayerImgMask" alt="" width="50" height="50">
+                        </div>
+                        <span class="spanNameDel">{{member.name}}</span>
+                        <a class="delBtn" ng-click="del($index)" ng-show="delShow"></a>
+                    </div>-->
+                    <div class="scrolDivDeletPl">
+                        <div class="scrolDiv2DeletPl">
+                            <ion-scroll zooming="false" direction="y" class="scrolSizeDeletPl">
+                                <table class="tableNextDel">
+                                    <tr ng-repeat="member in members">
+                                        <td class="tdDelImg">
+                                            <img ng-src="{{member.pic}}" class="img-responsive delPlayerPic" alt="Cinque Terre">
+                                            <!--<img ng-src="images/new/imageFrame.png" class="img-responsive delPlayerImgMask" alt="" width="50" height="50">-->
+                                        </td>
+                                        <td class="tdDelPlayerName"><span class="spanNameDel">{{member.name}}</span></td>
+                                        <td class="tdDeletButton"><a class="delBtn" ng-click="del($index)" ng-show="delShow"></a></td>
+                                    </tr>
+                                </table>
+                            </ion-scroll>
+                        </div>
+                    </div>
+                    <div class="divButtonResetOk">
+                        <a class="btn resetButton" ng-click="reset()"></a>
+                        <a class="okButton" ng-click="okButton()"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </ion-content>
+</ion-view>
+

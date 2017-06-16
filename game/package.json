@@ -1,0 +1,11 @@
+{
+    "name": "game",
+    "version": "1.0.0",
+  "dependencies": {
+    "gulp": "3.9.0",
+    "cordova": "5.4.1",
+    "cordova-android": "5.1.0",
+    "base64-xor": "0.10.0",
+     "requirejs": "2.2.0"
+  }
+}
